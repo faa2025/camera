@@ -2,7 +2,7 @@
 Surveillance camera project for Softala course
 
 ## Jukka Juslin's live stream channel
-https://www.youtube.com/@jtjuslin1234
+[https://www.youtube.com/watch?v=4637xjTMXCs](https://www.youtube.com/watch?v=4637xjTMXCs)
 
 ## Team members
 
