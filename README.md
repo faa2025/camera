@@ -6,6 +6,20 @@ Surveillance camera project for Softala course
 
 ## Developer Guide
 
+Technologies used:
+- Java
+- Typescript
+- React
+- Vite
+
+Prerequisites:
+- Java Development Kit (JDK)
+- Apache Maven
+- MySQL Server
+- TBA
+
+## Troubleshooting
+
 TBA
 
 ## Team members
@@ -20,4 +34,4 @@ TBA
 
 ## License
 
-Camera is [MIT licensed](./LICENSE).
+Camera is MIT licensed.
