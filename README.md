@@ -4,6 +4,10 @@ Surveillance camera project for Softala course
 ## Jukka Juslin's live stream channel
 [https://www.youtube.com/watch?v=4637xjTMXCs](https://www.youtube.com/watch?v=4637xjTMXCs)
 
+## Developer Guide
+
+TBA
+
 ## Team members
 
 - [Juslin Jukka](https://github.com/jusju)
