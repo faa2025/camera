@@ -34,4 +34,4 @@ TBA
 
 ## License
 
-Camera is [MIT licensed](./LICENSE).
+Camera is MIT licensed.
