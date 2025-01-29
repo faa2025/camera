@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Spring Boot-CameraApplication<camera>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "com.faa2025.camera.CameraApplication",
+			"projectName": "camera",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		}
+	]
+}
