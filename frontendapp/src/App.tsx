@@ -2,26 +2,13 @@ import YouTubeEmbed from "./YoutubeEmbed";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import Button from "@mui/material/Button";
-
+import Navbar from "./components/Navbar";
 function App() {
   const videoId = "RBZgpIW08Fk";
   return (
     <Router>
       <div className="App">
-        <nav
-          className="navbar"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <Link to="/">Home Page</Link>
-
-          <p>
-            <Link to="/login" style={{ textDecoration: "none" }}>
-              <Button variant="contained" color="secondary">
-                Log in
-              </Button>
-            </Link>
-          </p>
-        </nav>
+        <Navbar />
         <Routes>
           <Route
             path="/"
