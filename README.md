@@ -1,18 +1,22 @@
 # camera
+
 Surveillance camera project for Softala course
 
 ## Jukka Juslin's live stream channel
+
 [https://www.youtube.com/watch?v=4637xjTMXCs](https://www.youtube.com/watch?v=4637xjTMXCs)
 
 ## Developer Guide
 
 Technologies used:
+
 - Java
 - Typescript
 - React
 - Vite
 
 Prerequisites:
+
 - Java Development Kit (JDK)
 - Apache Maven
 - MySQL Server
@@ -34,4 +38,4 @@ TBA
 
 ## License
 
-Camera is MIT licensed.
+Camera is [MIT licensed](./LICENSE).
