@@ -1,7 +1,6 @@
 import YouTubeEmbed from "./YoutubeEmbed";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import Button from "@mui/material/Button";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 function App() {
   const videoId = "RBZgpIW08Fk";
