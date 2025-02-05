@@ -1,6 +1,10 @@
 import YouTubeEmbed from "./YoutubeEmbed";
 import "./App.css";
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+=======
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+>>>>>>> 40fe31b228a6a635f7defdd858748c0cb81d7f7b
 import Navbar from "./components/Navbar";
 import Services from "./components/pages/Services";
 import Product from "./components/pages/Product";
