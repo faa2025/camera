@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
   const closeMobileMenu = (): void => setClick(false);
 
   const showButton = (): void => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 900) {
       setButton(false);
     } else {
       setButton(true);
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <Link
-              to="/sign-up"
+              to="/Signup"
               className="nav-links-mobile"
               onClick={closeMobileMenu}
             >
