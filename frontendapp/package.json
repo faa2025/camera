@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "frontendapp",
   "homepage": "https://faa2025.github.io/camera",
   "private": true,
@@ -7,7 +6,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" ,
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -38,38 +37,4 @@
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5"
   }
-=======
-    "name": "frontendapp",
-    "homepage": "https://faa2025.github.io/camera",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "tsc -b && vite build",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist",
-        "lint": "eslint .",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "frontendapp": "file:",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.17.0",
-        "@types/react": "^18.3.18",
-        "@types/react-dom": "^18.3.5",
-        "@vitejs/plugin-react": "^4.3.4",
-        "eslint": "^9.17.0",
-        "eslint-plugin-react-hooks": "^5.0.0",
-        "eslint-plugin-react-refresh": "^0.4.16",
-        "gh-pages": "^6.3.0",
-        "globals": "^15.14.0",
-        "typescript": "~5.6.2",
-        "typescript-eslint": "^8.18.2",
-        "vite": "^6.0.5"
-    }
->>>>>>> 0e1043a1191623508f9034935f1a4ae3d7851748
 }
