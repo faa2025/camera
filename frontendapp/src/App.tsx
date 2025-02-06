@@ -1,15 +1,13 @@
 import YouTubeEmbed from "./YoutubeEmbed";
 import "./App.css";
-<<<<<<< HEAD
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-=======
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
->>>>>>> 40fe31b228a6a635f7defdd858748c0cb81d7f7b
 import Navbar from "./components/Navbar";
 import Services from "./components/pages/Services";
 import Product from "./components/pages/Product";
-import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
 import Homepage from "./components/pages/Homepage";
+import ProtectedRoute from "./ProtectedRoute";
+import Dashboard from "./components/pages/Dashboard.tsx";
 function App() {
   const videoId = "RBZgpIW08Fk";
   return (
@@ -20,7 +18,15 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Product />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         <Routes>
           <Route
