@@ -1,4 +1,4 @@
-package com.faa2025.camera.controller;
+package com.faa2025.camera.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;

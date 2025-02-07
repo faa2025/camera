@@ -22,17 +22,12 @@ Prerequisites:
 - MySQL Server
 - TBA
 
-## Troubleshooting
-
-TBA
-
 ## Team members
 
 - [Juslin Jukka](https://github.com/jusju)
 - [Henein Roda](https://github.com/hxrda)
 - [Nevalainen Jesse](https://github.com/Suppiluliumas)
 - [Zafar Irum](https://github.com/zafarirum87)
-- [Mede Daniela](https://github.com/mededaniela)
 - [Domracheva Polina](https://github.com/PolinaD31)
 - [Nguyen Minh](https://github.com/NguyenMinh03)
 
