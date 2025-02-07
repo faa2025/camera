@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/camera",
   build: {
-    outDir: 'build',
+    outDir: 'dist',
   },
 });
