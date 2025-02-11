@@ -27,6 +27,8 @@ TBA
 ### ERD
 TBA
 
+## Developer guide
+
 ### Frontend
 
 1. To start the frontend application:
@@ -93,8 +95,7 @@ TBA? (swagger)
 ## Web service URL Frontend
 TBA
 
-
-(## Web service URL Backend)
+## Web service URL Backend
 (TBA?)
 
 
