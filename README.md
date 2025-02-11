@@ -9,10 +9,10 @@ This project leverages AI to analyze surveillance camera footage for detecting p
 The project architecture consists of the following components:
 
 - **Frontend**: A React application that provides a user interface and interacts with the Sprin Boot backend application via REST API calls. It additionally displays an embedded livefeed from the camera.
-- **Backend**: Consists of a Spring Boot application and server.   The Spring Boot application that handles business logic, manages data interaction, and serves as a REST API provider. It processes requests from the frontend and communicates with the server and the database. The server runs scripts and the AI tools for human detection. 
--**AI**: Analyzes snapshots from the surveillance camera footage to detect persons (and vehicles?). Runs on the backend server. 
-- **Database**: The project's database stores users an d (?). H2 is used for local development, while MySQL is used for production deployment.
--**Camera**: TBA
+- **Backend**: Consists of a Spring Boot application and server.   The Spring Boot application that handles business logic, manages data interaction, and serves as a REST API provider. It processes requests from the frontend and communicates with the server and the database. The server runs scripts and the AI tools for human detection.   
+- **AI**: Analyzes snapshots from the surveillance camera footage to detect persons (and vehicles?). Runs on the backend server. 
+- **Database**: The project's database stores users an d (?). H2 is used for local development, while MySQL is used for production deployment.  
+- **Camera**: TBA
 
 ### Architecture Diagram
 
