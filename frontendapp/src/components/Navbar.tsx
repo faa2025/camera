@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+          <Link to="/camera" className="navbar-logo" onClick={closeMobileMenu}>
             FAA Camera
             <i className="fab fa-typo3" />
           </Link>
@@ -37,7 +37,11 @@ const Navbar: React.FC = () => {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/camera"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 Home
               </Link>
             </li>
@@ -61,7 +65,7 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/Login"
+                to="/camera/Login"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
