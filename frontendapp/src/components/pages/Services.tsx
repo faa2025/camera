@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Services.css";
-import YouTubeEmbed from "./YouTubeEmbed";
+import YouTubeEmbed from "./YoutubeEmbed";
 
 const Services: React.FC = () => {
   const allEvents = [
