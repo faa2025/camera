@@ -12,10 +12,10 @@ public class SendEmailService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-    @Value("${spring.mail.username}")
+    @Value("${FROM_EMAIL}")
     private String fromEmailId;
 
-    public void sendEmail(String recipient, String body, String subject ){
+    public void sendEmail(String recipient, String body, String subject) {
 
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setFrom(fromEmailId);
@@ -25,5 +25,5 @@ public class SendEmailService {
 
         javaMailSender.send(simpleMailMessage);
 
-}
+    }
 }
