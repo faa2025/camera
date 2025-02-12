@@ -67,8 +67,8 @@ TBA
 
 ### Database
 TBA
-(- Development Environment: H2 Database) ?
-(- Production Environment: MySQL) ?
+- (Development Environment: H2 Database) ?
+- (Production Environment: MySQL) ?
 
 ### System Requirements
 
@@ -84,13 +84,14 @@ TBA
 - Node.js: Version 18 or later (required to run the Vite development server and manage dependencies).You can check your Node.js version with the command: `node -v`
 - npm: Comes bundled with Node.js (used to install project dependencies and run the application).
 
-## REST API documentation URL
-TBA? (swagger) 
-
 
 ## Camera live feed (Jukka Juslin's channel):
 
 [https://www.youtube.com/watch?v=T-u-BbFNNY4](https://www.youtube.com/watch?v=T-u-BbFNNY4)
+
+## REST API documentation URL
+TBA? (swagger) 
+
 
 ## Web service URL Frontend
 TBA
