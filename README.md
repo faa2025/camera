@@ -96,7 +96,7 @@ TBA? (swagger)
 
 
 ## Web service URL Frontend
-TBA
+https://faa2025.github.io/camera/
 
 ## Web service URL Backend
 (TBA?)
