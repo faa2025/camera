@@ -93,13 +93,13 @@ TBA
 
 ## Camera live feed (Jukka Juslin's channel):
 
-[https://www.youtube.com/watch?v=T-u-BbFNNY4](https://www.youtube.com/watch?v=T-u-BbFNNY4)
+- [https://www.youtube.com/watch?v=T-u-BbFNNY4](https://www.youtube.com/watch?v=T-u-BbFNNY4)
 
 (Testing link for a stream that is down: https://www.youtube.com/watch?v=4637xjTMXCs )
 
 ## Images from livestream (non-labeled)
 
-[http://softala.haaga-helia.fi/images/] http://softala.haaga-helia.fi/images/
+- [http://softala.haaga-helia.fi/images/](http://softala.haaga-helia.fi/images/)
 
 ## REST API documentation URL
 
