@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 public class EmailController {
 
+    //Note, we're using "HumanDetectionEmailController" & "VehicleDetectionEmailController" instead
+
     @Autowired
     private SendEmailService sendEmailService;
 

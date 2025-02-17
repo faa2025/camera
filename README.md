@@ -9,9 +9,9 @@ This project leverages AI to analyze surveillance camera footage for detecting p
 The project architecture consists of the following components:
 
 - **Frontend**: A React application that provides a user interface and interacts with the Sprin Boot backend application via REST API calls. It additionally displays an embedded livefeed from the camera.
-- **Backend**: Consists of a Spring Boot application and server.   The Spring Boot application that handles business logic, manages data interaction, and serves as a REST API provider. It processes requests from the frontend and communicates with the server and the database. The server runs scripts and the AI tools for human detection.   
-- **AI**: Analyzes snapshots from the surveillance camera footage to detect persons (and vehicles?). Runs on the backend server. 
-- **Database**: The project's database stores users an d (?). H2 is used for local development, while MySQL is used for production deployment.  
+- **Backend**: Consists of a Spring Boot application and server. The Spring Boot application that handles business logic, manages data interaction, and serves as a REST API provider. It processes requests from the frontend and communicates with the server and the database. The server runs scripts and the AI tools for human detection.
+- **AI**: Analyzes snapshots from the surveillance camera footage to detect persons (and vehicles?). Runs on the backend server.
+- **Database**: The project's database stores users an d (?). H2 is used for local development, while MySQL is used for production deployment.
 - **Camera**: TBA
 
 ### Architecture Diagram
@@ -23,8 +23,11 @@ TBA
 TBA
 
 ### Entities and attributes
+
 TBA
+
 ### ERD
+
 TBA
 
 ## Developer guide
@@ -50,23 +53,27 @@ TBA
 
 - Using a Command-line interface (CLI), navigate to the the project's backend folder
 - Start the application by running the `./mvnw spring-boot:run` command
-(- Once the Spring Boot app is initialized, visit <http://localhost:8080> in a web browser)
+  (- Once the Spring Boot app is initialized, visit <http://localhost:8080> in a web browser)
 
 2. Technologies used:
 
 - Programming Language: Java
-- Frameworks: Spring Boot, MVC 
+- Frameworks: Spring Boot, MVC
 - Major Libraries: Maven
 
 ### Backend server
+
 1. TBA
 2. Technologies used:
+
 - Programming Language: Python, Shell scripts
 - AI tools: Tensorflow
 - Major Libraries:
 
 ### Database
+
 TBA
+
 - (Development Environment: H2 Database) ?
 - (Production Environment: MySQL) ?
 
@@ -77,13 +84,12 @@ TBA
 - Java version 17: Java version can be found in the pom.xml file in the java.version property.
 - Python versions 3.9 through 3.12
 - Maven: Required to build and run the Spring Boot application.
-- NVIDIA GPU 
+- NVIDIA GPU
 
 #### Frontend
 
 - Node.js: Version 18 or later (required to run the Vite development server and manage dependencies).You can check your Node.js version with the command: `node -v`
 - npm: Comes bundled with Node.js (used to install project dependencies and run the application).
-
 
 ## Camera live feed (Jukka Juslin's channel):
 
@@ -91,16 +97,21 @@ TBA
 
 (Testing link for a stream that is down: https://www.youtube.com/watch?v=4637xjTMXCs )
 
-## REST API documentation URL
-TBA? (swagger) 
+## Images from livestream (non-labeled)
 
+[http://softala.haaga-helia.fi/images/] http://softala.haaga-helia.fi/images/
+
+## REST API documentation URL
+
+TBA? (swagger)
 
 ## Web service URL Frontend
+
 https://faa2025.github.io/camera/
 
 ## Web service URL Backend
-(TBA?)
 
+(TBA?)
 
 ## Team members
 
@@ -113,8 +124,7 @@ https://faa2025.github.io/camera/
 
 ## Product backlog
 
-https://github.com/orgs/faa2025/projects/1/views/1 
-
+https://github.com/orgs/faa2025/projects/1/views/1
 
 ## License
 

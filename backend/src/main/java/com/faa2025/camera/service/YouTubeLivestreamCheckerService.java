@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import java.util.logging.Logger;
 import reactor.core.publisher.Mono;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 public class YouTubeLivestreamCheckerService {
@@ -41,17 +43,32 @@ public class YouTubeLivestreamCheckerService {
                 .bodyToMono(String.class);
 
         responseMono.subscribe(response -> {
-            if (response == null || !response.contains("\"liveBroadcastContent\":\"live\"")) {
-                if (!notificationSent) {
-                    sendEmailService.sendEmail(
-                            destinationEmail,
-                            "The livestream is down. Please check the link: https://www.youtube.com/watch?v=" + videoId,
-                            "YouTube Livestream Alert");
-                    notificationSent = true;
-                    logger.warning("Livestream down! Email notification sent.");
+            //logger.info("YouTube API response: " + response);
+            try {
+                ObjectMapper objectMapper = new ObjectMapper();
+                JsonNode rootNode = objectMapper.readTree(response);
+                JsonNode itemsNode = rootNode.path("items");
+                if (itemsNode.isArray() && itemsNode.size() > 0) {
+                    JsonNode liveBroadcastContentNode = itemsNode.get(0).path("snippet").path("liveBroadcastContent");
+                    String liveBroadcastContent = liveBroadcastContentNode.asText();
+                    if (!"live".equals(liveBroadcastContent)) {
+                        if (!notificationSent) {
+                            sendEmailService.sendEmail(
+                                    destinationEmail,
+                                    "The livestream is down. Please check the link: https://www.youtube.com/watch?v=" + videoId,
+                                    "YouTube Livestream Alert");
+                            notificationSent = true;
+                            logger.warning("Livestream down! Email notification sent.");
+                        }
+                    } else {
+                        notificationSent = false;
+                        logger.info("Livestream is up! No notification sent.");
+                    }
+                } else {
+                    logger.warning("No items found in the YouTube API response.");
                 }
-            } else {
-                notificationSent = false;
+            } catch (Exception e) {
+                logger.severe("Error parsing YouTube API response: " + e.getMessage());
             }
         }, error -> logger.severe("Error checking livestream status: " + error.getMessage()));
     }
