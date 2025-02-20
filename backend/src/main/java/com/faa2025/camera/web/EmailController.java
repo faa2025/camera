@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 public class EmailController {
 
-    //Note, we're using "HumanDetectionEmailController" & "VehicleDetectionEmailController" instead
+    //Note, the solution uses "HumanDetectionEmailController" and optionally "VehicleDetectionEmailController" for email notifications 
 
     @Autowired
     private SendEmailService sendEmailService;
 
     @GetMapping("sendEmail")
     public String sendEmail(){
-        sendEmailService.sendEmail("nevalainen.jesse92@gmail.com", "Movement detected", "Camera Alert");
+        sendEmailService.sendEmail("firstname.lastname@example.com", "Movement detected", "Camera Alert");
         return "Email notification sent succesfully";
     }
     

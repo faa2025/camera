@@ -19,7 +19,7 @@ public class DaylightCheckerService {
         return isDaylight;
     }
 
-    @Scheduled(fixedRate = 3600000) // Run every hour (every one min:fixedRate = 60000)
+    @Scheduled(fixedRate = 3600000) // Run once every hour
     public void checkDaylightPeriodically() {
         ZonedDateTime now = ZonedDateTime.now(FINLAND_ZONE);
         SunTimes sunTimes = SunTimes.compute()

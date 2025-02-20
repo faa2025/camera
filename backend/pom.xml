@@ -72,7 +72,6 @@
 			<artifactId>google-api-services-youtube</artifactId>
 			<version>v3-rev222-1.25.0</version>
 		</dependency>
-
 		<!-- Suncal for DaylightChecker-->
 		 <dependency>
 			<groupId>org.shredzone.commons</groupId>
@@ -85,7 +84,6 @@
 			<artifactId>tensorflow</artifactId>
 			<version>1.15.0</version>
 		</dependency>
-
 		<!-- Environment variables -->
 		<dependency>
 			<groupId>io.github.cdimascio</groupId>

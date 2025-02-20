@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.faa2025.camera.service.DaylightCheckerService;
 
 @RestController
-@RequestMapping("/api")  //http://our-deployed-backend/api/daylight
+@RequestMapping("/api")  
 public class DaylightController {
      private final DaylightCheckerService daylightCheckerService;
 
@@ -16,7 +16,7 @@ public class DaylightController {
 
     @GetMapping("/daylight")
     public boolean getDaylightStatus() {
-        return daylightCheckerService.getDaylightStatus();  //Should return true or false
+        return daylightCheckerService.getDaylightStatus();  //Returns true or false
     }
 
 }
