@@ -63,11 +63,11 @@ TBA
 
 ### Backend server
 
-1. TBA
+1. TBA (If AI related components are mentioned, refer to repository "ai-security-camera-object-detection")
 2. Technologies used:
 
-- Programming Language: Python, Shell scripts
-- AI tools: Tensorflow
+- Programming Languages:
+- Tools:
 - Major Libraries:
 
 ### Database
@@ -79,12 +79,10 @@ TBA
 
 ### System Requirements
 
-#### Backend
+#### Backend Spring Boot Application
 
 - Java version 17: Java version can be found in the pom.xml file in the java.version property.
-- Python versions 3.9 through 3.12
 - Maven: Required to build and run the Spring Boot application.
-- NVIDIA GPU
 
 #### Frontend
 
