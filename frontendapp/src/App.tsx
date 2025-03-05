@@ -5,11 +5,14 @@ import Services from "./components/pages/Services";
 import Product from "./components/pages/Product";
 import Login from "./components/pages/Login";
 import Homepage from "./components/pages/Homepage";
-import ProtectedRoute from "./ProtectedRoute";
+import ProtectedRoute from "./components/Authentication/ProtectedRoute";
 import Dashboard from "./components/pages/Dashboard.tsx";
 import Signup from "./components/pages/Signup.tsx";
+import { AuthProvider } from "./components/Authentication/AuthContext";
+
 function App() {
   return (
+     <AuthProvider>
     <Router>
       <div className="App">
         <Navbar />
@@ -30,6 +33,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </AuthProvider>
   );
 }
 

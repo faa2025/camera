@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../Authentication/AuthContext";
 import "./Login.css";
 
 const Login = () => {
@@ -7,27 +8,19 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
-    try {
-      const response = await fetch("http://localhost:5000/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
-      });
-
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || "Login failed");
-
-      localStorage.setItem("token", data.token);
+    if (login(username, password)) {
       navigate("/dashboard"); // Redirect after login
-    } catch (err: any) {
-      setError(err.message);
+    } else {
+      setError("Invalid username or password");
     }
   };
+
 
   return (
     <div className="login-container">
