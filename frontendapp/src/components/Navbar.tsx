@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { useAuth } from "./Authentication/AuthContext";
 
 const Navbar: React.FC = () => {
   const [click, setClick] = useState<boolean>(false);
   const [button, setButton] = useState<boolean>(true);
+const { isAuthenticated } = useAuth();
+const { logout } = useAuth();
 
   const handleClick = (): void => setClick(!click);
   const closeMobileMenu = (): void => setClick(false);
@@ -45,35 +48,41 @@ const Navbar: React.FC = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/services"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Services
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/products"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/camera/Login"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                Log In
-              </Link>
-            </li>
+             {isAuthenticated && (
+              <>
+                <li className="nav-item">
+                  <Link to="/services" className="nav-links" onClick={closeMobileMenu}>
+                    Services
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/products" className="nav-links" onClick={closeMobileMenu}>
+                    Products
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/dashboard" className="nav-links" onClick={closeMobileMenu}>
+                    Dashboard
+                  </Link>
+                </li>
+                
+              </>
+            )}
+            {!isAuthenticated && (
+              <li className="nav-item">
+                <Link to="/camera/login" className="nav-links-mobile" onClick={closeMobileMenu}>
+                  Log In
+                </Link>
+              </li>
+            )}
           </ul>
-          {button && <Button buttonStyle="btn--outline">Login</Button>}
+          {button && (
+            isAuthenticated ? (
+              <Button buttonStyle="btn--outline" onClick={logout}>Logout</Button>
+            ) : (
+              <Button buttonStyle="btn--outline">Login</Button>
+            )
+          )}
         </div>
       </nav>
     </>
