@@ -5,7 +5,7 @@ interface AuthContextType {
   user: string | null;
   isAuthenticated: boolean;
   googleLogin: (username: string) => void;
-  login: (username: string, password: string) => boolean;
+  // login: (username: string, password: string) => boolean;
   logout: () => void;
 }
 
@@ -13,21 +13,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<string | null>(localStorage.getItem("user"));
- const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-
-  const login = (username: string, password: string): boolean => {
-    const foundUser = users.find(
-      (u) => u.username === username && u.password === password
-    );
-
-    if (foundUser) {
-      localStorage.setItem("user", username);
-      setUser(username);
-      setIsAuthenticated(true);
-      return true;
-    }
-    return false;
-  };
+ const [isAuthenticated, setIsAuthenticated] = useState<boolean>(!!user);
 const googleLogin = (username: string) => {
     localStorage.setItem("user", username);
     setUser(username);
@@ -41,7 +27,7 @@ const googleLogin = (username: string) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, login,googleLogin, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, user,googleLogin, logout }}>
       {children}
     </AuthContext.Provider>
   );

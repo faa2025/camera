@@ -1,23 +1,28 @@
 import React from "react";
-import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
-import * as jwtDecode from "jwt-decode";  
+import * as jwtDecode from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin, CredentialResponse } from "@react-oauth/google";
 
-const GOOGLE_CLIENT_ID = "939939014296-8d490ohf8bgo1d8svqddqrgdj4alqt1m.apps.googleusercontent.com"; // google O-auth Client ID
+// google O-auth Client ID
+const GOOGLE_CLIENT_ID =
+"939939014296-8d490ohf8bgo1d8svqddqrgdj4alqt1m.apps.googleusercontent.com";
 
-const GoogleAuth: React.FC = () => {
-  const { googleLogin } = useAuth();
+interface GoogleAuthProps {
+  onSuccess: (username: string) => void;
+  onError: (error: string) => void;
+}
+
+const GoogleAuth: React.FC<GoogleAuthProps> = ({ onSuccess, onError }) => {
   const navigate = useNavigate();
 
   const handleSuccess = (response: CredentialResponse) => {
     if (response.credential) {
       const decodedToken: any = jwtDecode.jwtDecode(response.credential);
       const username = decodedToken.email;
-      googleLogin(username);
+       onSuccess(username);
       navigate("/dashboard"); // Redirect after Google login
     } else {
-      console.log("No credential found in response");
+      onError("No credential found in response");
     }
   };
 
