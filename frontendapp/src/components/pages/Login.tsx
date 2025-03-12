@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Authentication/AuthContext";
 import "./Login.css";
+import GoogleAuth from "../Authentication/GoogleLogin";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -46,6 +47,10 @@ const Login = () => {
       <p className="signup-link">
         Don't have an account? <a href="/sign-up">Sign up</a>
       </p>
+      <div className="google-login">
+        <h3>Or login with Google</h3>
+        <GoogleAuth />
+      </div>
     </div>
   );
 };

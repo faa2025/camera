@@ -4,6 +4,7 @@ import { users } from "./Users";
 interface AuthContextType {
   user: string | null;
   isAuthenticated: boolean;
+  googleLogin: (username: string) => void;
   login: (username: string, password: string) => boolean;
   logout: () => void;
 }
@@ -27,6 +28,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
     return false;
   };
+const googleLogin = (username: string) => {
+    localStorage.setItem("user", username);
+    setUser(username);
+   setIsAuthenticated(true);
+  }
 
   const logout = () => {
     localStorage.removeItem("user");
@@ -35,7 +41,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, login,googleLogin, logout }}>
       {children}
     </AuthContext.Provider>
   );
