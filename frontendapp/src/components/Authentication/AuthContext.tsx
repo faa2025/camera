@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, ReactNode } from "react";
-import { users } from "./Users";
 
 interface AuthContextType {
   user: string | null;
