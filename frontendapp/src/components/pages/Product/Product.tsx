@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./Product.css"; // Add a CSS file for styling
+import "./Product.css";
+import "./ui/Picture"
+import { Picture } from "./ui/Picture";
 
 interface ImageData {
   id: number;
@@ -65,10 +67,7 @@ const Product: React.FC = () => {
           <div key={date} className="date-group">
             <h2>{date}</h2>
             {images.map((image) => (
-              <div key={image.id} className="image-container">
-                <img src={image.url} alt={`Image ${image.id}`} />
-                <p className="timestamp">{image.time}</p>
-              </div>
+              <Picture key={image.id} image={image} />
             ))}
           </div>
         ))}

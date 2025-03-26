@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Services from "./components/pages/Services";
-import Product from "./components/pages/Product";
+import Product from "./components/pages/Product/Product.tsx";
 import Login from "./components/pages/Login";
 import Homepage from "./components/pages/Homepage";
 import ProtectedRoute from "./components/Authentication/ProtectedRoute";
