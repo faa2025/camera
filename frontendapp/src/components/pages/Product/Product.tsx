@@ -17,7 +17,7 @@ const Product: React.FC = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch("/api/saved_human_frame/");
+        const response = await fetch("https://cors-anywhere.herokuapp.com/https://softala.haaga-helia.fi/~polina/saved_human_frame/");
         if (!response.ok) {
           throw new Error("Failed to fetch images");
         }
