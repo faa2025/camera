@@ -30,7 +30,7 @@ const Product: React.FC = () => {
 
         // Extract date and time from filenames and group by date
         const images = imageElements.map((el, index) => {
-          const url = new URL(el.getAttribute("href")!, "https://jtjuslin.kapsi.fi/saved_human_frame/").toString();
+          const url = new URL(el.getAttribute("href")!, "https://softala.haaga-helia.fi/~polina/saved_human_frame/").toString();
           const filename = el.getAttribute("href")!;
           const match = filename.match(/(\d{4}-\d{2}-\d{2})_(\d{2}-\d{2}-\d{2})/); // Match date and time in the filename
           const date = match ? match[1] : "Unknown Date";
@@ -57,6 +57,12 @@ const Product: React.FC = () => {
     fetchImages();
   }, []);
 
+  const formatDateWithWeekday = (dateString: string) => {
+    const date = new Date(dateString);
+    const options: Intl.DateTimeFormatOptions = { weekday: "long" , year: "numeric", month: "numeric", day: "numeric" };
+    return date.toLocaleDateString(undefined, options);
+  };
+
   return (
     <div className="product-page">
       <h1> Home Monitor </h1>
@@ -65,7 +71,7 @@ const Product: React.FC = () => {
       <div className="image-gallery">
         {Object.entries(imagesByDate).map(([date, images]) => (
           <div key={date} className="date-group">
-            <h2>{date}</h2>
+            <h2>{formatDateWithWeekday(date)}</h2>
             {images.map((image) => (
               <Picture key={image.id} image={image} />
             ))}
