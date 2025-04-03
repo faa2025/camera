@@ -57,6 +57,8 @@ const Product: React.FC = () => {
     fetchImages();
   }, []);
 
+  console.log(imagesByDate)
+
   const formatDateWithWeekday = (dateString: string) => {
     const date = new Date(dateString);
     const options: Intl.DateTimeFormatOptions = { weekday: "long" , year: "numeric", month: "numeric", day: "numeric" };
@@ -69,10 +71,12 @@ const Product: React.FC = () => {
       <p>Welcome</p>
       {error && <p className="error">{error}</p>}
       <div className="image-gallery">
-        {Object.entries(imagesByDate).map(([date, images]) => (
+      {Object.keys(imagesByDate)
+        .sort((a, b) => new Date(b).getTime() - new Date(a).getTime())
+        .map((date) => (
           <div key={date} className="date-group">
             <h2>{formatDateWithWeekday(date)}</h2>
-            {images.map((image) => (
+            {imagesByDate[date].map((image) => (
               <Picture key={image.id} image={image} />
             ))}
           </div>
